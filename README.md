@@ -1,12 +1,12 @@
 # Bellscoin Mint page template
 
-This website is a template for a typical mint experience for $BELLS. 
+This website is a template for a typical mint experience for $BELLS. It simultes a mint process by sending the inscriptions from a certain wallet to another after signing a tx with the [nintondo wallet](https://nintondo.io).
 
 This will not work with all wallet types depending on your inscription methods. If you use oldschool p2sh inscriptions, taproot will not be supported. 
 
 ## Settings and preparations
 
-- The collection must be completely set up, i.e. all inscriptions must already be available in a wallet and there must be an inscriptions.json file in [ordinals standard format](https://github.com/ordinals-wallet/ordinals-collections). You can use [BellsNftTools](https://github.com/0xsol1d/BellsNftTools) to inscribe your colletion as it creates this file at art creation for you and puts in 
+- The collection must be completely set up, i.e. all inscriptions must already be available in a wallet and there must be an inscriptions.json file in [ordinals standard format](https://github.com/ordinals-wallet/ordinals-collections). You can use [BellsNftTools](https://github.com/0xsol1d/BellsNftTools) to inscribe your colletion as it creates this file at art creation for you and puts in the ids from the inscribing process. 
 - You have to set your treasury address that will recieve the mint funds:
 
 ```js
