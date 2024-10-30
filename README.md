@@ -24,7 +24,7 @@ NEXT_PUBLIC_ADDRESS=<WALLET ADDRESS>
 - If the rarity function is to be used, then the rarity.json file must be available (see public folder). This can be created from the correct inscriptions.json file in the ordinals standard with this [BellsNftTools](https://github.com/0xsol1d/BellsNftTools). This collection can also help to inscribe the collection.
 - The number of mints is already predefined in the return function of the page.tsx file. This can simply be changed as required.
 
-´´´js
+```js
 <button
     onClick={() => ChangeAmount(5)}             //change this number here
     role="tab"
@@ -40,7 +40,7 @@ NEXT_PUBLIC_ADDRESS=<WALLET ADDRESS>
         <div>5</div>                                //and here
     </div>
 </button>
-´´´
+```
 
 - There should be a minimum understanding of the structure of a transaction in order to be able to adapt the MintInscription() function if necessary. The website assumes that, as with the CHibiBElls mint, half of the mint price will go directly to the bellscoin donation address if this is not desired.
 
