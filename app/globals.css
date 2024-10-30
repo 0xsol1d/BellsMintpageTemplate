@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: 'Chibi';
+  src: url('/fonts/04B.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EasVhs';
+  src: url('/fonts/easvhs.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.blink {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: red;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.color-change {
+  animation: color-change 2s linear infinite;
+}
+
+.fire-text {
+  position: relative;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: transparent;
+}
+
+.fire-text::before,
+.fire-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fire-text::before {
+  color: orange;
+  z-index: 1;
+  animation: burning 1.5s infinite alternate;
+}
+
+.fire-text::after {
+  color: red;
+  z-index: 0;
+  filter: blur(12px);
+  animation: burning 1.5s infinite alternate-reverse;
+}
+
+@keyframes burning {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-1px) scale(1.03);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animated-text {
+  display: inline-block;
+  color: #fff;
+  animation: scaleUpDown 2s infinite, colorChange 5s infinite;
+}
+
+@keyframes scaleUpDown {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #ff00cc;
+  }
+  25% {
+    color: #ccff00;
+  }
+  50% {
+    color: #00ccff;
+  }
+  75% {
+    color: #ff6600;
+  }
+  100% {
+    color: #ff00cc;
+  }
+}
+
+.neon-text {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  animation: scaleUpDown 2s infinite, pulse 4s infinite;
+}
+
+.neon-text::before {
+  content: 'Neon Glow';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0, 255, 255, 0);
+  filter: blur(10px);
+  opacity: 0.1;
+  z-index: -2;
+}
+
+.neon-text::after {
+  content: 'Neon Glow';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(255, 0, 255, 0.466);
+  filter: blur(20px);
+  opacity: 0.1;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    text-shadow: 0 0 5px #0ff, 0 0 6px #0ff, 0 0 7px #0ff, 0 0 8px #0ff, 0 0 9px #0ff, 0 0 10px #0ff, 0 0 11px #0ff, 0 0 12px #0ff;
+  }
+  50% {
+    text-shadow: 0 0 5px #f0f, 0 0 6px #f0f, 0 0 7px #f0f, 0 0 8px #f0f, 0 0 9px #f0f, 0 0 10px #f0f, 0 0 11px #f0f, 0 0 12px #f0f;
+  }
+}
