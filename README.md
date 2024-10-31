@@ -56,6 +56,23 @@ psbt.addOutput({            //If you don´t want to donate to bellschain, delete
 });
 ```
 
+- To use the whitelist feature you just need to add addresses to the whitelist.json file in the following format:
+
+```
+[
+    {
+    "address": "ADRRESS_1"
+    },
+    {
+    "address": "ADRRESS_2"
+    },
+    {
+    "address": "ADRRESS_3"
+    },
+    ...
+]
+```
+
 ## Text effects
 
 You can use the following text effects to adjust the appearance inside the classNames:
